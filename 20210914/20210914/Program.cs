@@ -11,7 +11,7 @@ namespace _20210914
         static void Main(string[] args)
         {
 
-           feladat1();
+            feladat1();
             feladat2();
             feladat3();
             feladat4();
@@ -23,7 +23,10 @@ namespace _20210914
             feladat10();
             feladat11();
             feladat12and13();
-         //   feladat14();
+            feladat14();
+            feladat15();
+            feladat16();
+            feladat17();
 
 
             Console.WriteLine("Program vége");
@@ -84,7 +87,7 @@ namespace _20210914
     }
         static void feladat7()
         {
-            //7. Feladat
+            
             Console.WriteLine("7.Feladat: ");
             Console.WriteLine("Add meg a tágélalap A oldalát!");
             double teglaA = double.Parse(Console.ReadLine());
@@ -93,7 +96,7 @@ namespace _20210914
         Console.WriteLine("A téglalap kerülete: {0} \n A négyzet területe: {1} ", teglaA*2+teglaB*2, (teglaB*teglaA));
 
     }
-    static void feladat8()
+        static void feladat8()
         {
 
             Console.WriteLine("8.Feladat: ");
@@ -131,7 +134,7 @@ namespace _20210914
         }
         static void feladat10()
         {
-            //10. Feladat
+            
             Console.WriteLine("10.Feladat: ");
     Console.WriteLine("Add meg a háromszög a oldalát!");
             double haromszogA = double.Parse(Console.ReadLine());
@@ -202,7 +205,73 @@ namespace _20210914
             }
             
         }
-        
+        static void feladat14()
+        {            
+            Console.WriteLine("14. Feladat!     Add meg a háromszög 2 befogólyát.");
+            bool neg =true;
+            double a = 0;
+            double b = 0;
+            do
+            {               
+                Console.WriteLine("Add meg az 'a' befogót!");
+                a = double.Parse(Console.ReadLine());
+                Console.WriteLine("Add meg az 'b' befogót!");
+                b = double.Parse(Console.ReadLine());
+               
+                if (a <= 0 || b <= 0)
+                {
+                    Console.WriteLine("A számok nem lehetnek kissebbek vagy egyenlok 0 val");
+                }
+                else
+                {
+                    neg =false;
+                    Console.WriteLine("A c átfoggó értéke {0:.00}", Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2)));
+                }
+            } while (neg);
+            
+            
+        }
+        static void feladat15()
+        {
+            Console.WriteLine("15. Feladat: Kocka élének hosszából Felszin és térfogat");
+            Console.WriteLine("Add meg a Kocka élének hosszát");
+            double a = double.Parse(Console.ReadLine());
+            double F = 6 * Math.Pow(a, 2);
+            double V = Math.Pow(a, 3);
+            Console.WriteLine("A kocka felszine:\t{0}\nA kocka térfogata:\t{1}", F, V);
+
+        }
+        static void feladat16()
+        {
+            Console.WriteLine("16. Feladat: Téglatest élének hosszaiból Felszin és térfogat");
+            Console.WriteLine("Add meg az 'a' élének hosszát");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Add meg az 'b' élének hosszát");
+            double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Add meg az 'c' élének hosszát");
+            double c = double.Parse(Console.ReadLine());
+            double F = 2 * (a * b + a * c + b * c);
+            double V = a * b * c;
+            if (a>0 && b>0 && c>0)
+            {
+                Console.WriteLine("A Téglatest felszine:\t{0}\nA kocka térfogata:\t{1}", F, V);
+            }
+            else
+            {
+                Console.WriteLine("Nem tartalmazhat negativ szamot!");
+            }
+            
+
+        }
+        static void feladat17()
+        {
+            Console.WriteLine("17. Feladat: Kör területe és kerülete!");
+            Console.WriteLine("Add meg a köt átmérőjét!");
+            double r = double.Parse(Console.ReadLine())/2;
+            double K = 2 * r * Math.PI;
+            double T = Math.Pow(r, 2) * Math.PI;
+            Console.WriteLine("A kör területe:\t{0}\nA kör területe\t{1}", T, K);
+        }
 
     }
 }
