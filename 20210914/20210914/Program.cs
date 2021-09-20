@@ -27,7 +27,7 @@ namespace _20210914
             feladat15();
             feladat16();
             feladat17();
-
+            feladat18();
 
             Console.WriteLine("Program vége");
             Console.ReadKey();
@@ -272,6 +272,20 @@ namespace _20210914
             double T = Math.Pow(r, 2) * Math.PI;
             Console.WriteLine("A kör területe:\t{0}\nA kör területe\t{1}", T, K);
         }
+        static void feladat18()
+        {
+            Console.WriteLine("Fokban vagy radiában");
 
+            Console.WriteLine("A kör sugara");
+            double r = double.Parse(Console.ReadLine());
+            Console.WriteLine("A középponti szög fokban");
+            double fok = double.Parse(Console.ReadLine());
+
+            double radian = fok * Math.PI / 180;
+
+            double i = r * radian;//körív hossza
+            double T = (r * i) / 2;//területe
+            Console.WriteLine("18. Feladat:\nA köriv hossza:{0}\nA határoló iv területe {1}", r, T);
+        }
     }
 }
