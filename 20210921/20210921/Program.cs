@@ -64,12 +64,16 @@ namespace _20210921
         }
         static void feladat4()
         {
-            //hibás
+            
             Console.WriteLine("4.Feladat:\tAdj meg egy számot és eldöntjük hogy -30 és 40 között van e");
             double szam = double.Parse(Console.ReadLine());
-            if (szam>=-30 || szam<=40)
+            if (szam>=-30 && szam<=40)
             {
-                Console.WriteLine("A szám -30 és 40 között van!");
+                Console.WriteLine("A szám -30 és 40 között van!\tA megadott szám {0}", szam);
+            }
+            else
+            {
+                Console.WriteLine("A megadott szám nincsen -30 és 40 között\tA megadott szám {0}", szam);
             }
         }
         static void feladat5()
