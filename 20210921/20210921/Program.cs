@@ -10,17 +10,22 @@ namespace _20210921
     {
         static void Main(string[] args)
         {
-           /* feladat1();
+           feladat1();
             feladat2();
             feladat3();
             feladat4();
-            feladat5();*/
+            feladat5();
             feladat6();
+            feladat7();
+            feladat8();
+            feladat9();
+            feladat10();
+           
             Console.ReadKey();
         }
         static void feladat1()
         {
-            Console.WriteLine("Adj meg egy számot");
+            Console.WriteLine("1.Feladat:\tAdj meg egy számot és eldöntjük hogy páros vagy páratlan!");
             double szam = double.Parse(Console.ReadLine());
             if (szam%2==0)
             {
@@ -33,7 +38,7 @@ namespace _20210921
         }
         static void feladat2()
         {
-            Console.WriteLine("Adj meg egy számot");
+            Console.WriteLine("2.Feladat:\tAdj meg egy számot és eldöntjük az előjelét");
             double szam = double.Parse(Console.ReadLine());
             if (szam>=0)
             {
@@ -46,7 +51,7 @@ namespace _20210921
         }
         static void feladat3()
         {
-            Console.WriteLine("Adj meg egy hőmérsékletet.");
+            Console.WriteLine("3.Feladat:\tAdj meg egy hőmérsékletet.");
             double szam = double.Parse(Console.ReadLine());
             if (szam<=0)
             {
@@ -59,7 +64,8 @@ namespace _20210921
         }
         static void feladat4()
         {
-            Console.WriteLine("Adj meg egy számot");
+            //hibás
+            Console.WriteLine("4.Feladat:\tAdj meg egy számot és eldöntjük hogy -30 és 40 között van e");
             double szam = double.Parse(Console.ReadLine());
             if (szam>=-30 || szam<=40)
             {
@@ -68,7 +74,7 @@ namespace _20210921
         }
         static void feladat5()
         {
-            Console.WriteLine("Adj meg egy számot");
+            Console.WriteLine("5.Feladat:\tAdj meg egy számot");
             double szam = double.Parse(Console.ReadLine());
             double ujszam = 0;
             if (szam<16)
@@ -89,7 +95,7 @@ namespace _20210921
             int szam = 0;
             while (szam==0)
             {
-                Console.WriteLine(" Adj meg egy számot");
+                Console.WriteLine(" Adj meg egy számot és eldöntjük 10 eseke szerint hova tartozik");
                 
                 szam = int.Parse(Console.ReadLine());
                 int maradek = 0;
@@ -105,5 +111,79 @@ namespace _20210921
                 
             }
         }
+        static void feladat7()
+        {
+            Console.WriteLine("7.Feladat:\tAdj meg egy számot eldöntjük hogy 25>12> és páros-e");
+            double szam = double.Parse(Console.ReadLine());
+            if (szam>12 && szam<25 && szam%2==0)
+            {
+                Console.WriteLine("Ez a szám páros és 25>12> A megadott szám {0}", szam);
+            }
+            else
+            {
+                Console.WriteLine("A szám nem felel meg a feltételeknek");
+            }
+        }
+        static void feladat8()
+        {
+            Console.WriteLine("8.Feladat:\tAdj meg egy számot és megnézzük milyen halmazállapotú a víz!");
+            double szam = double.Parse(Console.ReadLine());
+            if (szam>0 && szam<100)
+            {
+                Console.WriteLine("A viz folyékony halmazállapotu");
+            }
+            else if (szam>100)
+            {
+                Console.WriteLine("A viz gáz halmazállapotu");
+            }
+            else
+            {
+                Console.WriteLine("A viz szilárd halmazállapotu");
+            }
+        }
+        static void feladat9()
+        {
+            Console.WriteLine("9.Feladat:\tAdj meg egy számot és eldöntjük hogy osztható e 9-4-3 al.");
+            double szam = double.Parse(Console.ReadLine());
+            if (szam%9==0)
+            {
+                Console.WriteLine("A szám 9 al osztható!");
+            }
+            else if (szam%4==0)
+            {
+                Console.WriteLine("A szám 4 al osztható!");
+            }
+            else if (szam%3==0)
+            {
+                Console.WriteLine("A szám 3 al osztható!");
+            }
+            else if (szam%3==0 && szam%9==0)
+            {
+                Console.WriteLine("A zám osztható 9 el és 3 al is.");
+            }
+            else
+            {
+                Console.WriteLine("A szám nem osztható 3,4 se 9 el");
+            }
+        }
+        static void feladat10()
+        {
+            Console.WriteLine("10.Feladat:");
+            int szam = 0;
+            while (szam<=0)
+            {
+                Console.WriteLine("Adj meg egy évszámot és eldöntjük hogy szökő év e!");
+                szam = int.Parse(Console.ReadLine());
+                if (szam%4==0)
+                {
+                    Console.WriteLine("Ez az év szökőév");
+                }
+                else
+                {
+                    Console.WriteLine("Ez az évn em szökőév");
+                }
+            }
+        }
+        
     }
 }
