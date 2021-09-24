@@ -19,7 +19,7 @@ namespace _20210923_2
 
         private void Btn_ossz_Click(object sender, EventArgs e)
         {
-            int adat1=int.Parse(textBox1.Text)
+            int adat1=int.Parse(textBox1.Text);
         }
     }
 }
