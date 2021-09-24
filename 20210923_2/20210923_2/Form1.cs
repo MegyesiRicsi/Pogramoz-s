@@ -19,7 +19,29 @@ namespace _20210923_2
 
         private void Btn_ossz_Click(object sender, EventArgs e)
         {
-            int adat1=int.Parse(textBox1.Text);
+            double adat1=double.Parse(textBox1.Text);
+            double adat2 = double.Parse(textBox2.Text);
+            lbl_change.Text = "Művelet: Összeadás!";
+            double ossz = adat1 + adat2;
+            txt_eredmeny.Text = Convert.ToString(ossz);
+        }
+
+        private void Btn_kivon_Click(object sender, EventArgs e)
+        {
+            double adat1 = double.Parse(textBox1.Text);
+            double adat2 = double.Parse(textBox2.Text);
+            lbl_change.Text = "Művelet: Kivonás!";
+            double kulonb = adat1 - adat2;
+            txt_eredmeny.Text = Convert.ToString(kulonb);
+        }
+
+        private void Bnt_szor_Click(object sender, EventArgs e)
+        {
+            double adat1 = double.Parse(textBox1.Text);
+            double adat2 = double.Parse(textBox2.Text);
+            lbl_change.Text = "Művelet: Szorzás!";
+            double szor = adat1 * adat2;
+            txt_eredmeny.Text = Convert.ToString(szor);
         }
     }
 }
