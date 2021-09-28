@@ -11,7 +11,7 @@ namespace _20210927
         static void Main(string[] args)
         {
 
-            Feladat1();
+          //  Feladat1();
 
             Feladat2();
               Feladat3();
