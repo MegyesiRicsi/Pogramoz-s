@@ -83,6 +83,7 @@
             this.btn_bezar.TabIndex = 4;
             this.btn_bezar.Text = "Bezár";
             this.btn_bezar.UseVisualStyleBackColor = true;
+            this.btn_bezar.Click += new System.EventHandler(this.Btn_bezar_Click);
             // 
             // txt_1
             // 

@@ -43,5 +43,10 @@ namespace _20210923_4._0
                 }
             }
         }
+
+        private void Btn_bezar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
