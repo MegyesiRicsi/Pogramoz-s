@@ -21,7 +21,8 @@ namespace _20210930_7
         {
             int kicsi = int.Parse(txt_kicsi.Text);
             int nagy = int.Parse(txt_nagy.Text);
-            List<int> oszto = new List<int>();
+            // List<int> oszto = new List<int>();
+            int r = 0;
             if (nagy < kicsi)
             {
                 MessageBox.Show("Hibás bemeneti adat!");
@@ -30,35 +31,27 @@ namespace _20210930_7
             }
             else
             {
-                try
-                {
+                
 
-                    for (int i = 1; i <= kicsi; i++)
+                    while (nagy%kicsi!=0)
                     {
-                        if (kicsi % i == 0 && nagy % i == 0)
-                        {
-                            oszto.Add(i);
-                        }
+                        r = nagy % kicsi;
+                        nagy = kicsi;
+                        kicsi = r;
                     }
-                    int kozos = oszto.Max();
-                    txt_kozos.Text = Convert.ToString(kozos);
+                    txt_kozos.Text = Convert.ToString(kicsi);
                 
 
             }
-                catch (InvalidOperationException)
-            {
                 
-                throw;
-            }
 
         }
-            
-            
-        }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
+
+    
 }

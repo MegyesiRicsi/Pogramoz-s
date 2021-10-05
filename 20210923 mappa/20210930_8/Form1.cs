@@ -24,21 +24,19 @@ namespace _20210930_8
 
         private void Btn_szamit_Click(object sender, EventArgs e)
         {
-            int f1 = 0;
+            int f1 = 1;
             int f2 = 1;
-            List<int> fn = new List<int>();
-            while (fn.Count!=10)
+            int f3 = 0;
+            string asd = "";
+            for (int i = 0; i < 11; i++)
             {
-                fn.Add(f1 + f2);
+                f3 = f1 + f2;
+                asd =asd+ Convert.ToString(f1) + "\n";
                 f1 = f2;
-                f2++;
-                
+                f2 = f3;
             }
-
-            for (int i = 0; i < 10; i++)
-            {
-               
-            }
+            lbl_szam.Text = asd;
+            
         }
     }
 }
