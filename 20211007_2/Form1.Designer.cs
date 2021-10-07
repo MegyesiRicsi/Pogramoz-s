@@ -60,6 +60,7 @@
             this.btn_kilep.TabIndex = 2;
             this.btn_kilep.Text = "kilép";
             this.btn_kilep.UseVisualStyleBackColor = true;
+            this.btn_kilep.Click += new System.EventHandler(this.Btn_kilep_Click);
             // 
             // btn_iras
             // 

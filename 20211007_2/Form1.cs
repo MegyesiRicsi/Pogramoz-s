@@ -26,5 +26,10 @@ namespace _20211007_2
                 listBox1.Items.Add(item);
             }
         }
+
+        private void Btn_kilep_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
