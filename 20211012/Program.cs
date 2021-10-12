@@ -11,11 +11,26 @@ namespace _20211012
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-           // feladat48();
+           // feladat31();
+            // feladat48();
             //feladat49();
-           // feladat39();
-            feladat40();
+            // feladat39();
+            //   feladat40();
+            //  feladat41();
+            feladat42();
+            feladat43();
             Console.ReadKey();
+        }
+        static void feladat31()
+        {
+            Console.WriteLine("Adj meg 1 számot aminek vesszük a faktoriálisát");
+            int szam = int.Parse(Console.ReadLine());
+            int ertek = 1;
+            for (int i = 1; i <=szam; i++)
+            {
+                ertek = ertek * i;
+            }
+            Console.WriteLine(ertek);
         }
         static void feladat48()
         {
@@ -82,6 +97,39 @@ namespace _20211012
             }
             Console.WriteLine(valtozik);
             Console.WriteLine($"{eredeti}={eredeti/3}*3+{valtozik}");
+        }
+        static void feladat41()
+        {
+           int szam=rnd.Next(1,101);
+            for (int i = 0; i < 10; i++)
+            {
+                szam = rnd.Next(1, 101);
+                Console.WriteLine(szam);
+            }
+        }
+        static void feladat42()
+        {
+            
+            for (int i = 0; i < 20; i++)
+            {
+              int  szam = rnd.Next(0, 21);
+                Console.Write(szam+",");
+            }
+        }
+        static void feladat43()
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                int szam = rnd.Next(25, 51);
+                Console.Write(szam + ",");
+            }
+        }
+        static void feladat44()
+        {
+            int szam1 = rnd.Next(10, 51);
+            int szam2 = rnd.Next(10, 51);
+            Console.WriteLine("A 2 szám szorzata: "+szam1*szam2);
+
         }
     }
 }
