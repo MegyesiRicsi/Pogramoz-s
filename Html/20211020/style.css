@@ -1,0 +1,40 @@
+body {
+    background-image: url('alap.JPG');
+    width: 650px;
+    margin-left: 350px;
+    margin-right: auto;
+    color: #333333;
+    margin-top: 75px;
+    margin-bottom: 200px;
+}
+
+#kep {
+    float: right;
+    text-align: left;
+    width: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 140%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 120%;
+    padding-bottom: 20px;
+}
+
+#div {
+    margin-left: 50px;
+}
+
+#copy {
+    text-align: right;
+}
+
+hr {
+    height: 5px;
+    background-color: #555555;
+    border-radius: 5px;
+}
