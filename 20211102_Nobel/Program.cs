@@ -133,6 +133,7 @@ namespace _20211102_Nobel
             }
             Console.WriteLine($"7. Feladat: A keresett átlag {Math.Round( atlag.Average(), 1)} év");
             Console.ReadKey();
+
         }
     }
 }
