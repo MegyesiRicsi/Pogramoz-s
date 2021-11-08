@@ -1,0 +1,14 @@
+﻿Budapest-MAFC; Budapest; Gabányi László Sportcsarnok; 900
+Vasas Budapest; Budapest; Sport11 Csarnok; 1000
+JP Cop-Jászberényi KSE; Jászberény; Bercsényi úti Sportcsarnok; 1000
+Kaposvári KK; Kaposvár; Kaposvári Városi Sportcsarnok; 1200
+KTE-Duna Aszfalt; Kecskemét; Messzi István Sportcsarnok; 1600
+Egis Körmend; Körmend; Körmend Városi Sportcsarnok; 2000
+Atomerőmű SE; Paks; ASE Sportcsarnok; 720
+Pécsi VSK-Pannonpower; Pécs; Lauber Dezső Sportcsarnok; 2400
+Soproni KC; Sopron; Novomatic Aréna; 1316
+Naturtex-SZTE-Szedeák; Szeged; Újszegedi Sportcsarnok; 3200
+Alba Fehérvár; Székesfehérvár; Vodafone Sportcsarnok; 2400
+Szolnoki Olaj KK; Szolnok; Tiszaligeti Sportcsarnok; 2080
+Falco KC Szombathely; Szombathely; Arena Savaria; 3200
+Zalakerámia-ZTE KK; Zalaegerszeg; Zalakerámia Sportcsarnok; 1800
