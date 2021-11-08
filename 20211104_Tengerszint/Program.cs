@@ -31,9 +31,7 @@ namespace _20211104_Tengerszint
                 lista.Add(new Magasság(sr.ReadLine()));
             }
             Console.WriteLine($"2. Feladat: {lista.Count} darab sor van megadva ");
-            var felett5k = (from sor in lista
-                            where sor.magas > 5000
-                            select sor).Count();
+            var felett5k = (from sor in lista where sor.magas > 5000   select sor).Count();
             Console.WriteLine($"3. Feladat:5000 felett ennyi van: {felett5k}");
             var svedmax = (
                 from sor in lista
@@ -104,8 +102,6 @@ namespace _20211104_Tengerszint
             }
             sw.Close();
             Console.ReadKey();
-
-
         }
     }
 }
