@@ -1,0 +1,13 @@
+Operációs rendszerek
+- az operációs rendszer fogalma
+- az operációs rendszer feladata és részei
+- az operációs rendszerek csoportosítása különböző 
+szempontok szerint
+- példákat operációs rendszerekre
+- a zárt és a nyitott forráskódú rendszerek
+Háttértárak
+- a háttértárak típusai
+- a merevlemez felépítése és az adattárolás szerkezete
+- a merevlemez és az elektronikus háttértárak működése
+- milyen célra érdemes elektronikus háttértárat vásárolni a 
+merevlemezzel szemben?

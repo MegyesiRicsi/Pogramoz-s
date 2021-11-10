@@ -51,12 +51,12 @@ namespace _20211109_kektura
             Console.WriteLine($"\tKezdete {rovid.indulopont}");
             Console.WriteLine($"\tVége: {rovid.vegpont}");
             Console.WriteLine($"\tkezdete: {rovid.hossz} km");
-            var igaz = (
+            var HianyosNev = (
                 from sor in lista
                 where sor.ph=='i'                
                 select sor);
             Console.WriteLine("7. Feladat Hiányos állomások");
-            foreach (var item in igaz)
+            foreach (var item in HianyosNev)
             {
                 if (!item.vegpont.Contains("pecsetelohely"))
                 {
