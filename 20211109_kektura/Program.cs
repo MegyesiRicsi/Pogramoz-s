@@ -32,7 +32,7 @@ namespace _20211109_kektura
         static void Main(string[] args)
         {
             var sr = new StreamReader("kektura.csv", Encoding.GetEncoding("ISO8859-1"));
-            var elsosor = sr.ReadLine();
+            var elsosor =int.Parse( sr.ReadLine());
             var lista = new List<Szakasz>();
             while (!sr.EndOfStream)
             {
@@ -63,7 +63,17 @@ namespace _20211109_kektura
                     Console.WriteLine($"\t{item.vegpont}");
                 }               
             }
-
+            var pp = (
+                from sor in lista
+                orderby elsosor+sor.emelkedes - sor.leejtes
+                
+                select sor).Last();
+          int szam = elsosor + pp.emelkedes-pp.leejtes;
+            Console.WriteLine(pp.leejtes);
+            Console.WriteLine(pp.emelkedes);
+            Console.WriteLine(elsosor);
+            Console.WriteLine($"{pp.vegpont} {szam} ");
+           
           Console.ReadKey();
         }
     }
