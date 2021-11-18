@@ -51,11 +51,17 @@ namespace _20211116_Prost
                               orderby sor.pont
                               where sor.nev == "San Marino Grand Prix"
                               select sor).Last();
-
-            Console.WriteLine($"\t{san_marino.date}");
+        
+           Console.WriteLine($"\t{san_marino.date}");
             Console.WriteLine($"\t{san_marino.helyezes}. helyezés");
             Console.WriteLine($"\t{ san_marino.pont} pont");
-            
+          /*  foreach (var item in san_marino)
+            {
+                Console.WriteLine(item.nev);
+                Console.WriteLine($"\t{item.date}");
+                Console.WriteLine($"\t{item.helyezes}. helyezés");
+                Console.WriteLine($"\t{item.pont} pont");
+            }*/
             Console.ReadKey();
         }
     }
