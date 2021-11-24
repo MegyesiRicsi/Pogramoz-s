@@ -15,7 +15,7 @@ namespace _20211123_Lift
         public Lift(string sor)
         {
             var s = sor.Split(' ');
-            date = s[0];
+            date = s[0].Trim('.');
             karty = int.Parse(s[1]);
             indulo = int.Parse(s[2]);
             cel = int.Parse(s[3]);
@@ -81,7 +81,12 @@ namespace _20211123_Lift
             {
                 Console.WriteLine("még nem vot");
             }
-            //var stat=(from sor in lista group sor.date by)
+            var stat = (from sor in lista group sor by sor.date  );
+            foreach (var item in stat)
+            {
+                Console.WriteLine($"{item.Key}      {item.Count()}");
+            }
+
                 
 
             
