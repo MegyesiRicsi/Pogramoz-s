@@ -59,8 +59,7 @@ namespace _20211125_HotelLiftGUI
             }
             btn_keres.Enabled = false;
             }
-
-        private void Btn_lbir_Click(object sender, EventArgs e)
+                private void Btn_lbir_Click(object sender, EventArgs e)
         {
             string datum = txt_date.Text;
             string kartya = txt_kartya.Text;
