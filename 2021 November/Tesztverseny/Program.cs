@@ -60,7 +60,7 @@ namespace Tesztverseny
                 select sor).ToList();
             double avg =(double)fo.Count/(double)lista.Count*100 ;
             Console.WriteLine($"A feladatra {fo.Count()} fő, a versenyzők {avg:0.00}%-a adott helyes választ.");
-            int psz = 0;
+           /* int psz = 0;
             for (int i = 0; i < lista.Count(); i++)
             {
                 psz = 0;
@@ -73,35 +73,34 @@ namespace Tesztverseny
                             case 1:
                             case 2:
                             case 3:
-                            case 4:
-                                psz = psz + 3;
+                            case 4:                                
                             case 5:
+                                psz = psz + 3;
+                                break;
                             case 6:
                             case 7:
                             case 8:
                             case 9:
                             case 10:
+                                psz = psz + 4;
+                                break;
                             case 11:
                             case 12:
                             case 13:
-                        
+                                psz = psz + 5;
+                                break;
+                            case 14:
+                                psz = psz + 6;
+                                break;
+
 
                             default:
                                 break;
                         }
                     }
                 }
-            }
-
-
-            /*   foreach (var item in fo)
-            {
-                Console.WriteLine(item.valaszok[szam]+" "+helyes[szam]);
             }*/
-
-
-
-
+           
             Console.ReadKey();
         }
     }

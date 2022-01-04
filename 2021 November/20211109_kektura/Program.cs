@@ -65,8 +65,7 @@ namespace _20211109_kektura
             }
             var pp = (
                 from sor in lista
-                orderby elsosor+sor.emelkedes - sor.leejtes
-                
+                orderby sor.emelkedes - sor.leejtes                
                 select sor).Last();
           int szam = elsosor + pp.emelkedes-pp.leejtes;
             Console.WriteLine(pp.leejtes);
