@@ -56,14 +56,15 @@ namespace _20220103
             //6. feladat
             var fs = false;
             foreach (var item in lista)
-            {
-               // Console.WriteLine(item.ev+" "+item.honap+" "+item.nap);
-                if (item.ev%4==0 && item.nap==24 && item.honap==2)
-                {
-                    
-                    fs = true;
-                }
-            }
+             {
+                // Console.WriteLine(item.ev+" "+item.honap+" "+item.nap);
+                 if (item.ev%4==0 && item.nap==24 && item.honap==2)
+                 {
+
+                     fs = true;
+                 }
+             }
+            
             if (fs)
             {
                 Console.WriteLine("6. feladat: Volt valtozas szokonapon!");
@@ -83,7 +84,7 @@ namespace _20220103
                 Console.Write("8. feladat: Kerem adja meg ay evszamot [2011..2016]: ");
                 szam = int.Parse(Console.ReadLine());
             } while (szam>2016 || szam<2011);
-
+            var napokSzama = new int[] { 31, 28,31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             
 
             Console.ReadKey();
