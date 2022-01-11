@@ -30,6 +30,7 @@ namespace _20220111_tarsalgo
             {
                 lista.Add(new Beki(sr.ReadLine()));
             }
+            Console.WriteLine("2. Feladat");
             var elso = (
                 from sor in lista
                 orderby sor.hely
@@ -38,8 +39,8 @@ namespace _20220111_tarsalgo
             {
                 Console.WriteLine(item.hely);
             }*/
-            Console.WriteLine(elso.First().id);
-            Console.WriteLine(elso.Last().id);
+            Console.WriteLine($"Az első belépő: {elso.First().id}");
+            Console.WriteLine($"Az utoló kilépő: {elso.Last().id}");
             var stat = (
                 from sor in lista
                 orderby sor.id
@@ -51,6 +52,8 @@ namespace _20220111_tarsalgo
             }
             sw.Close();
             //4 es feladat
+            
+            Console.WriteLine("\n4. Feladat\n");
             foreach (var item in stat)
             {
                 if (item.Count()%2!=0)
@@ -59,7 +62,7 @@ namespace _20220111_tarsalgo
                 }
             }
             //5 os feladat
-            
+            Console.WriteLine("\n\n5. feladat");
             var dblista = new List<int>();
             int db = 0;
             
@@ -90,16 +93,17 @@ namespace _20220111_tarsalgo
                 }
                 if (db==dblista.Max())
                 {
-                    Console.WriteLine(item.ora+":"+item.perc);
+                    Console.WriteLine($"Például {item.ora}:{item.perc}-kor voltak a legtöbben a társalgóban.");
                 }
             }
-            Console.WriteLine("adj be egy azonostot");
+            Console.Write("\n6. feladat\nAdja meg a személy azonositoját! ");
             int az = int.Parse(Console.ReadLine());
-           
+            Console.WriteLine();
             var hetedik = (
                 from sor in lista
                 where sor.id == az
                 select sor).ToList();
+            Console.WriteLine("7. feladat");
             for (int i = 0; i < hetedik.Count(); i++)
             {
                 
@@ -114,8 +118,20 @@ namespace _20220111_tarsalgo
                     Console.Write(+hetedik[i].ora + ":" + hetedik[i].perc+"-");
                 }
             }
-            Console.WriteLine();
+            Console.WriteLine("\n\n8. feladat");
+            int szam = 0;
             
+            var ls = new List<int>();
+            for (int i = 0; i < hetedik.Count()-1; i+=2)
+            {
+                for (int j = 1; j < hetedik.Count()-1; j+=2)
+                {
+                    szam += (hetedik[j].ora * 60 + hetedik[j].perc) - (hetedik[i].ora * 60 + hetedik[i].perc);
+                }
+            }
+          
+            Console.WriteLine(szam);
+           
            
 
             // Console.WriteLine((from sor in dblista orderby sor select sor).Last());
