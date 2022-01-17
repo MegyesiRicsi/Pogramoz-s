@@ -9,7 +9,7 @@ namespace _20220111_tarsalgo
 {
     class Beki
     {
-        public int ora, perc, id;
+        public int ora, perc, id, oraperc;
         public string hely;
         public Beki(string s)
         {
@@ -18,6 +18,7 @@ namespace _20220111_tarsalgo
             perc = int.Parse(sor[1]);
             id= int.Parse(sor[2]);
             hely = sor[3];
+            oraperc = ora * 60+perc;
         }
     }
     class Program
@@ -119,20 +120,34 @@ namespace _20220111_tarsalgo
                 }
             }
             Console.WriteLine("\n\n8. feladat");
-            int szam = 0;
-            
-            var ls = new List<int>();
-            for (int i = 0; i < hetedik.Count()-1; i+=2)
+            var be = (
+                 from sor in lista
+                 where sor.hely == "be"
+                 where sor.id == az
+                 select sor.oraperc).Sum();
+            var ki = (
+                 from sor in lista
+                 where sor.hely == "ki"
+                 where sor.id == az
+                 select sor.oraperc).Sum();
+            int ossz = ki - be;
+            if (ossz<0)
             {
-                for (int j = 1; j < hetedik.Count()-1; j+=2)
-                {
-                    szam += (hetedik[j].ora * 60 + hetedik[j].perc) - (hetedik[i].ora * 60 + hetedik[i].perc);
-                }
+               ossz= ossz + 15 * 60;
+                Console.WriteLine($"A(z) {az}. személy összesen  { ossz} percet volt bent, a megfigyelés végén a társalgóban volt. ");
             }
-          
-            Console.WriteLine(szam);
+            else
+            {
+                Console.WriteLine($" A(z) {az}. személy összesen  { ossz} percet volt bent. ");
+            }
+            
            
-           
+
+
+
+
+
+
 
             // Console.WriteLine((from sor in dblista orderby sor select sor).Last());
             Console.ReadKey();
