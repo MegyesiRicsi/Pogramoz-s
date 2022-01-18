@@ -80,6 +80,10 @@ namespace _2022._01._17_Nobel
             {
                 Console.WriteLine("\t" +item.Key+"    "+item.Count());
             }
+            //8. Feladat           
+            var sw = new StreamWriter(File.Open("orvosi.txt", FileMode.Create), Encoding.UTF8);
+            
+            //https://stackoverflow.com/questions/373365/how-do-i-write-out-a-text-file-in-c-sharp-with-a-code-page-other-than-utf-8
             Console.ReadKey();
         }
     }
