@@ -12,7 +12,7 @@ namespace _2022._01._18_Elemek
         class Kemia
         {
             public string kor, nev, vegyjel, felfedezo;
-            public int rendszam, evszam;
+            public int rendszam;
             public Kemia(string sor)
             {
                 var s = sor.Split(';');
@@ -35,17 +35,21 @@ namespace _2022._01._18_Elemek
             Console.WriteLine(lista.Count());
             var okorban = (
                 from sor in lista
-                where sor.kor == "Ókor"
-                select sor).Count();
-            Console.WriteLine(okorban);
-            string bevegy;
-            do
+                where sor.kor == "kor"
+                select sor);
+            foreach (var item in lista)
             {
+                Console.WriteLine(item.kor);
+            }
+            Console.WriteLine(okorban.Count());
+            string bevegy = "";
+            do
+            {        
                 
-                Console.WriteLine("egy vegyjelet be");
-               bevegy=(Console.ReadLine());
-
-            } while (bevegy.Length==1 || bevegy.Length==2);
+               Console.WriteLine("egy vegyjelet be");
+                bevegy = (Console.ReadLine());
+                                   
+            } while (bevegy.Length!=1 && bevegy.Length!=2);
             Console.ReadKey();
         }
     }
