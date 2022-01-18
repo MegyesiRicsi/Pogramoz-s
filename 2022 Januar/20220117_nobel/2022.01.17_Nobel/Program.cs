@@ -82,6 +82,17 @@ namespace _2022._01._17_Nobel
             }
             //8. Feladat           
             var sw = new StreamWriter(File.Open("orvosi.txt", FileMode.Create), Encoding.UTF8);
+            var sorba = (
+                from sor in lista
+                where sor.tipus=="orvosi"
+                orderby sor.ev
+                select sor
+                );
+            foreach (var item in sorba)
+            {
+                sw.WriteLine(item.ev+" ; "+item.kereszt+" "+item.vezetek+"  "+item.tipus);
+            }
+            sw.Close();
             
             //https://stackoverflow.com/questions/373365/how-do-i-write-out-a-text-file-in-c-sharp-with-a-code-page-other-than-utf-8
             Console.ReadKey();
